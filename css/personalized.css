@@ -2,16 +2,6 @@ body {
 	text-align: justify;
 }
 
-.inlined-left {
-	float: left;
-	margin: 20px 20px 20px 0;
-}
-
-.inlined-right {
-	float: right;
-	margin: 20px 0 20px 20px;
-}
-
 #header-background {
 	background: url(../img/header_bg.png) no-repeat, url(../img/noisy-checks.png) repeat;
 	height: 194px;
