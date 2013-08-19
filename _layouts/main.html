@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ianreah.com - Home</title>
+    <meta name="description" content="Ian Reah's home on the web. A .NET developer playing around with some different technologies in his spare time!">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="alternate" type="application/rss+xml" title="RSS feed for ianreah.com" href="/rss.xml" />
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+    <link href="css/personalized.css" rel="stylesheet" media="screen">
+
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-34488349-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </head>
+  <body>
+    <div class="navbar navbar-static-top navbar-inverse">
+      <div class="navbar-inner" id="header-background">
+        <a class="brand" id="page-title" href="http://ianreah.com/">ianreah.com</a>
+        <ul class="nav pull-right" id="social">
+          <li id="github"><a href="https://github.com/ianreah"><span>#</span></a></li>
+          <li id="twitter"><a href="https://twitter.com/ianreah"><span>#</span></a></li>
+          <li id="codeproject"><a href="http://www.codeproject.com/Members/ianreah"><span>#</span></a></li>
+          <li id="stackoverflow"><a href="http://stackoverflow.com/users/76116/ianr"><span>#</span></a></li>
+          <li id="linkedin"><a href="http://uk.linkedin.com/pub/ian-reah/3a/326/50a"><span>#</span></a></li>
+          <li id="rss"><a href="/rss.xml"><span>#</span></a></li>
+        </ul>
+        <img alt='Ian Reah' src='img/ian-reah.jpg' class='img-polaroid hidden-phone' id="profile-photo" />
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span9">{{ content }}</div>
+        <div class="span3">
+          <div class="page-header"><h2>About</h2></div>
+
+          <p>I work as a Software Developer at <a href='http://nonlinear.com/'>Nonlinear Dynamics Limited</a>, a developer of proteomics and metabolomics software.</p>
+
+          <p>My day job mainly involves developing Windows desktop applications with C# .NET.</p>
+
+          <p>My hobby/spare-time development tends to focus on playing around with some different technologies (which, at the minute seems to be web application development with JavaScript).</p>
+
+          <p>It&#8217;s this hobby/spare-time development that you&#8217;re most likely to read about here.</p>
+
+          <p class='text-right'><strong>Ian Reah</strong></p>
+        </div>
+      </div>
+    </div>
+    <script src="//code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

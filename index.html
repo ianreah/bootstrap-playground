@@ -1,106 +1,44 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>ianreah.com - Home</title>
-    <meta name="description" content="Ian Reah's home on the web. A .NET developer playing around with some different technologies in his spare time!">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+---
+layout: main
+---
 
-    <link rel="shortcut icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
-    <link rel="alternate" type="application/rss+xml" title="RSS feed for ianreah.com" href="/rss.xml" />
-
-    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href="css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
-    <link href="css/personalized.css" rel="stylesheet" media="screen">
-
-    <script type="text/javascript">
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-34488349-1']);
-      _gaq.push(['_trackPageview']);
-
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-    </script>
-  </head>
-  <body>
-    <div class="navbar navbar-static-top navbar-inverse">
-      <div class="navbar-inner" id="header-background">
-        <a class="brand" id="page-title" href="http://ianreah.com/">ianreah.com</a>
-        <ul class="nav pull-right" id="social">
-          <li id="github"><a href="https://github.com/ianreah"><span>#</span></a></li>
-          <li id="twitter"><a href="https://twitter.com/ianreah"><span>#</span></a></li>
-          <li id="codeproject"><a href="http://www.codeproject.com/Members/ianreah"><span>#</span></a></li>
-          <li id="stackoverflow"><a href="http://stackoverflow.com/users/76116/ianr"><span>#</span></a></li>
-          <li id="linkedin"><a href="http://uk.linkedin.com/pub/ian-reah/3a/326/50a"><span>#</span></a></li>
-          <li id="rss"><a href="/rss.xml"><span>#</span></a></li>
-        </ul>
-        <img alt='Ian Reah' src='img/ian-reah.jpg' class='img-polaroid hidden-phone' id="profile-photo" />
-      </div>
-    </div>
-    <div class="container-fluid">
-      <div class="row-fluid">
-        <div class="span9">
-          <div class="row-fluid">
-            <div class="span4">
-              <h3>AR-Molecule</h3>
-              <p class="text-center"><img class="img-polaroid" src="img/project_ar_molecule.jpg" /></p>
-              <p>An augmented reality mobile app with 3D molecule structures. It's implemented for Android devices using the <a href="http://www.wikitude.com/">Wikitude</a> SDK. Most of the code should equally be as applicable to an iOS app through the magic of <a href="http://phonegap.com/">PhoneGap</a>.</p>
-              <p><a class="btn" href="http://ianreah.com/2013/08/11/Augmented-Reality-with-JavaScript-Part-2.html">Find out more &raquo;</a></p>
-            </div>
-            <div class="span4">
-              <h3>Molecules3D</h3>
-              <p class="text-center"><img class="img-polaroid" src="img/project_molecules3d.png" /></p>
-              <p>3D molecule structure visualisation with <a href="threejs.org">three.js</a>. This is a work in progress. I hope to eventually be able to search for a compound and have it determine and render its 3D representation. For now you can enjoy a spinning 3D caffeine molecule!</p>
-              <p><a class="btn" href="http://molecules3d.apphb.com/">See it in action &raquo;</a></p>
-            </div>
-            <div class="span4">
-              <h3>MusicVisualiser</h3>
-              <p class="text-center"><img class="img-polaroid" src="img/project_audio_visualizer_experiments.png" /></p>
-              <p>Some experimental music visualisers created in the browser by making use of the <a href="http://www.w3.org/TR/webaudio/">Web Audio API</a> and its real-time analysis capabilities. You can see a couple of examples of the visualisers <a href="http://ianreah.com/audio-visualizer-experiments/">on this page</a>, (I may come back and add some more), or <a href="http://ianreah.com/2013/02/28/Real-time-analysis-of-streaming-audio-data-with-Web-Audio-API.html">read the blog post</a> to find out more about how they work.</p>
-              <p><a class="btn" href="http://ianreah.com/audio-visualizer-experiments/">Find out more &raquo;</a></p>
-            </div>
-          </div>
-          <div class="row-fluid">
-            <div class="span4">
-              <h3>jsFrames</h3>
-              <p class="text-center"><img class="img-polaroid" src="img/project_jsframes.png" /></p>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-              <p><a class="btn" href="http://ianreah.github.com/jsFrames/">Find out more &raquo;</a></p>
-            </div>
-            <div class="span4">
-              <h3>MockStock</h3>
-              <p class="text-center"><img class="img-polaroid" src="img/project_mockstock.png" /></p>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-              <p><a class="btn" href="http://mockstock.apphb.com/">Find out more &raquo;</a></p>
-            </div>
-            <div class="span4">
-              <h3>CoverFlow</h3>
-              <p class="text-center"><img class="img-polaroid" src="img/project_coverflow.png" /></p>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-              <p><a class="btn" href="http://ianreah.github.com/CoverFlow/">Find out more &raquo;</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="span3">
-          <div class="page-header"><h2>About</h2></div>
-
-          <p>I work as a Software Developer at <a href='http://nonlinear.com/'>Nonlinear Dynamics Limited</a>, a developer of proteomics and metabolomics software.</p>
-
-          <p>My day job mainly involves developing Windows desktop applications with C# .NET.</p>
-
-          <p>My hobby/spare-time development tends to focus on playing around with some different technologies (which, at the minute seems to be web application development with JavaScript).</p>
-
-          <p>It&#8217;s this hobby/spare-time development that you&#8217;re most likely to read about here.</p>
-
-          <p class='text-right'><strong>Ian Reah</strong></p>
-        </div>
-      </div>
-    </div>
-    <script src="//code.jquery.com/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-  </body>
-</html>
+<div class="row-fluid">
+  <div class="span4">
+    <h3>AR-Molecule</h3>
+    <p class="text-center"><img class="img-polaroid" src="img/project_ar_molecule.jpg" /></p>
+    <p>An augmented reality mobile app with 3D molecule structures. It's implemented for Android devices using the <a href="http://www.wikitude.com/">Wikitude</a> SDK. Most of the code should equally be as applicable to an iOS app through the magic of <a href="http://phonegap.com/">PhoneGap</a>.</p>
+    <p><a class="btn" href="http://ianreah.com/2013/08/11/Augmented-Reality-with-JavaScript-Part-2.html">Find out more &raquo;</a></p>
+  </div>
+  <div class="span4">
+    <h3>Molecules3D</h3>
+    <p class="text-center"><img class="img-polaroid" src="img/project_molecules3d.png" /></p>
+    <p>3D molecule structure visualisation with <a href="threejs.org">three.js</a>. This is a work in progress. I hope to eventually be able to search for a compound and have it determine and render its 3D representation. For now you can enjoy a spinning 3D caffeine molecule!</p>
+    <p><a class="btn" href="http://molecules3d.apphb.com/">See it in action &raquo;</a></p>
+  </div>
+  <div class="span4">
+    <h3>MusicVisualiser</h3>
+    <p class="text-center"><img class="img-polaroid" src="img/project_audio_visualizer_experiments.png" /></p>
+    <p>Some experimental music visualisers created in the browser by making use of the <a href="http://www.w3.org/TR/webaudio/">Web Audio API</a> and its real-time analysis capabilities. You can see a couple of examples of the visualisers <a href="http://ianreah.com/audio-visualizer-experiments/">on this page</a>, (I may come back and add some more), or <a href="http://ianreah.com/2013/02/28/Real-time-analysis-of-streaming-audio-data-with-Web-Audio-API.html">read the blog post</a> to find out more about how they work.</p>
+    <p><a class="btn" href="http://ianreah.com/audio-visualizer-experiments/">Find out more &raquo;</a></p>
+  </div>
+</div>
+<div class="row-fluid">
+  <div class="span4">
+    <h3>jsFrames</h3>
+    <p class="text-center"><img class="img-polaroid" src="img/project_jsframes.png" /></p>
+    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+    <p><a class="btn" href="http://ianreah.github.com/jsFrames/">Find out more &raquo;</a></p>
+  </div>
+  <div class="span4">
+    <h3>MockStock</h3>
+    <p class="text-center"><img class="img-polaroid" src="img/project_mockstock.png" /></p>
+    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+    <p><a class="btn" href="http://mockstock.apphb.com/">Find out more &raquo;</a></p>
+  </div>
+  <div class="span4">
+    <h3>CoverFlow</h3>
+    <p class="text-center"><img class="img-polaroid" src="img/project_coverflow.png" /></p>
+    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+    <p><a class="btn" href="http://ianreah.github.com/CoverFlow/">Find out more &raquo;</a></p>
+  </div>
+</div>
