@@ -94,7 +94,7 @@ theRest:
 </div>
 
 <!-- collapse the rest of the projects -->
-<button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#moreProjects">
+<button type="button" id="toggleButton" class="btn btn-primary" data-toggle="collapse" data-target="#moreProjects">
   See more projects...
 </button>
  
@@ -122,8 +122,13 @@ theRest:
     
 <script>
   $(function () {
+    var $toggleButton = $("#toggleButton");
     $("#moreProjects").bind('shown', function () {
       this.scrollIntoView();
+      $toggleButton.text("Hide projects...");
+    })
+    .bind('hidden', function () {
+      $toggleButton.text("See more projects...");
     });
   });
 </script>
