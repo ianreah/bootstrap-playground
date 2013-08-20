@@ -64,15 +64,58 @@ next3-projects:
     img-url: img/project_coverflow.png
     call-to-action: Find out more
     description: *placeholder-desc
+
+theRest:
+  - name: SpotiBrowse
+    url: /Spotify-LibBrowser/
+    img-url: http://lorempixel.com/400/200
+    call-to-action: Find out more
+    description: *placeholder-desc 
+  - name: ClosureTape
+    url: /ClosureTickerTape/
+    img-url: http://lorempixel.com/400/200
+    call-to-action: See it in action
+    description: *placeholder-desc
 ---
 
+<!-- top3 projects always shown -->
 <div class="row-fluid">
   {% for project in page.top3-projects %}
     {% include project %}
   {% endfor %}
 </div>
+
+<!-- next3 projects are on the second row in desktop   -->
+<!-- but within the collapsed section on mobile (TODO) -->
 <div class="row-fluid">
   {% for project in page.next3-projects %}
     {% include project %}
   {% endfor %}
+</div>
+
+<!-- collapse the rest of the projects -->
+<button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#moreProjects">
+  See more projects...
+</button>
+ 
+<div id="moreProjects" class="collapse">
+  {% for project in page.theRest %}
+    {% assign column = forloop.index0 | modulo:3 %}
+    <!-- start a new row -->
+    {% if column == 0 %}
+      <div class="row-fluid">
+    {% endif %}
+
+    {% include project %}
+
+    <!-- close the row -->
+    {% if column == 2 %}
+      </div>
+    {% endif %}
+  {% endfor %}
+
+  <!-- close the row if we didn't fill it in the loop -->
+  {% if column != 2 %}
+    </div>
+  {% endif %}
 </div>
