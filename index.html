@@ -119,3 +119,11 @@ theRest:
     </div>
   {% endif %}
 </div>
+    
+<script>
+  $(function () {
+    $("#moreProjects").bind('shown', function () {
+      this.scrollIntoView();
+    });
+  });
+</script>
