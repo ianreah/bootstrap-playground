@@ -26,6 +26,11 @@ body {
 	bottom: 20px;
 }
 
+#footer {
+	height: 70px;
+	background-color: #F2F2F2;
+}
+
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) { 
 	#page-title {
