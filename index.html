@@ -86,9 +86,9 @@ theRest:
   {% endfor %}
 </div>
 
-<!-- next3 projects are on the second row in desktop   -->
-<!-- but within the collapsed section on mobile (TODO) -->
-<div class="row-fluid">
+<!-- next3 projects are on the second row in desktop -->
+<!-- but within the collapsed section on mobile      -->
+<div class="row-fluid hidden-phone">
   {% for project in page.next3-projects %}
     {% include project %}
   {% endfor %}
@@ -96,6 +96,12 @@ theRest:
 
 <!-- collapse the rest of the projects -->
 <div id="moreProjects" class="collapse">
+  <div class="row-fluid visible-phone">
+    {% for project in page.next3-projects %}
+      {% include project %}
+    {% endfor %}
+  </div>
+
   {% for project in page.theRest %}
     {% assign column = forloop.index0 | modulo:3 %}
     <!-- start a new row -->
