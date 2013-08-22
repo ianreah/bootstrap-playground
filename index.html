@@ -94,10 +94,6 @@ theRest:
 </div>
 
 <!-- collapse the rest of the projects -->
-<button type="button" id="toggleButton" class="btn btn-primary" data-toggle="collapse" data-target="#moreProjects">
-  See more projects...
-</button>
- 
 <div id="moreProjects" class="collapse">
   {% for project in page.theRest %}
     {% assign column = forloop.index0 | modulo:3 %}
@@ -119,16 +115,26 @@ theRest:
     </div>
   {% endif %}
 </div>
+
+<a href="javascript:void(0)" id="toggleLink" data-toggle="collapse" data-target="#moreProjects">
+  See more projects &raquo;
+</a>
     
 <script>
   $(function () {
-    var $toggleButton = $("#toggleButton");
+    var $toggleLink = $("#toggleLink");
     $("#moreProjects").bind('shown', function () {
-      this.scrollIntoView();
-      $toggleButton.text("Hide projects...");
+      var topleft = $(this).offset();
+
+      $('html, body').animate({
+        scrollTop: topleft.top,
+        scrollLeft: topleft.left
+      });
+
+      $toggleLink.html("\u00ab See fewer projects");
     })
     .bind('hidden', function () {
-      $toggleButton.text("See more projects...");
+      $toggleLink.html("See more projects \u00bb");
     });
   });
 </script>
