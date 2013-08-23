@@ -79,48 +79,25 @@ theRest:
     description: *placeholder-desc
 ---
 
-<!-- top3 projects always shown -->
-<div class="row-fluid">
-  {% for project in page.top3-projects %}
-    {% include project %}
-  {% endfor %}
-</div>
+{% comment %} top3 projects always shown {% endcomment %}
+{% assign projects = page.top3-projects %}
+{% include project-rows %}
 
-<!-- next3 projects are on the second row in desktop -->
-<!-- but within the collapsed section on mobile      -->
-<div class="row-fluid hidden-phone">
-  {% for project in page.next3-projects %}
-    {% include project %}
-  {% endfor %}
-</div>
+{% comment %} next3 projects are on the second row in desktop {% endcomment %}
+{% comment %} but within the collapsed section on mobile      {% endcomment %}
+{% assign projects = page.next3-projects %}
+{% assign visibility = 'hidden-phone' %}
+{% include project-rows %}
 
-<!-- collapse the rest of the projects -->
+{% comment %} collapse the rest of the projects {% endcomment %}
 <div id="moreProjects" class="collapse">
-  <div class="row-fluid visible-phone">
-    {% for project in page.next3-projects %}
-      {% include project %}
-    {% endfor %}
-  </div>
+  {% assign projects = page.next3-projects %}
+  {% assign visibility = 'visible-phone' %}
+  {% include project-rows %}
 
-  {% for project in page.theRest %}
-    {% assign column = forloop.index0 | modulo:3 %}
-    <!-- start a new row -->
-    {% if column == 0 %}
-      <div class="row-fluid">
-    {% endif %}
-
-    {% include project %}
-
-    <!-- close the row -->
-    {% if column == 2 %}
-      </div>
-    {% endif %}
-  {% endfor %}
-
-  <!-- close the row if we didn't fill it in the loop -->
-  {% if column != 2 %}
-    </div>
-  {% endif %}
+  {% assign projects = page.theRest %}
+  {% assign visibility = nil %}
+  {% include project-rows %}
 </div>
 
 <a href="javascript:void(0)" id="toggleLink" data-toggle="collapse" data-target="#moreProjects">
