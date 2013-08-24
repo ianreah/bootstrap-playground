@@ -1,3 +1,5 @@
+@import url(pygment_trac.css);
+
 body {
 	text-align: justify;
 }
@@ -29,6 +31,33 @@ body {
 #footer {
 	height: 70px;
 	background-color: #F2F2F2;
+}
+
+.post-meta {
+	margin: 0px;
+}
+
+.post-meta > li {
+	display: inline-block;
+	padding: 0 16px;
+	color: #909090;
+	font-size: 14px;
+}
+
+.post-comments {
+	background: url(../img/icon-comments.png) 0 50% no-repeat;
+}
+
+.post-date {
+	background: url(../img/icon-date.png) 0 50% no-repeat;
+}
+
+pre, code {
+  font-size: 12px;
+}
+
+pre {
+  line-height: 18px;
 }
 
 /* Landscape phone to portrait tablet */
