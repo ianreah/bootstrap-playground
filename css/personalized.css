@@ -60,6 +60,15 @@ pre {
   line-height: 18px;
 }
 
+blockquote {
+  color: #666;
+}
+
+blockquote p {
+  font-size: 16px;
+  line-height: 24px;
+}
+
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) { 
 	#page-title {
