@@ -56,6 +56,23 @@
           <p>It&#8217;s this hobby/spare-time development that you&#8217;re most likely to read about here.</p>
 
           <p class='text-right'><strong>Ian Reah</strong></p>
+
+          <div class="page-header"><h2>Latest Posts</h2></div>
+          
+          {% for post in site.posts limit:5 %}
+            <div class="row-fluid hidden-phone">
+              <div class="span1 fake-bullet"></div>
+              <div class="span11"><a href="{{ post.url }}">{{ post.title }};</a> <span class="muted"><small>{{ post.date | date: "%b %Y" }}</small></span></div>
+            </div>
+          {% endfor %}
+
+          <ul class="visible-phone">
+            {% for post in site.posts limit:5 %}
+              <li><a href="{{ post.url }}">{{ post.title }};</a> <span class="muted"><small>{{ post.date | date: "%b %Y" }}</small></span></li>
+            {% endfor %}
+          </ul>
+
+          <p class='text-right'><a href="/blog">Full blog &raquo;</a></p>
         </div>
       </div>
     </div>
