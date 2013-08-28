@@ -25,12 +25,37 @@ webaudioviz: &webaudioviz-desc >
       <a href="http://ianreah.com/2013/02/28/Real-time-analysis-of-streaming-audio-data-with-Web-Audio-API.html">
       read the blog post</a> to find out more about how they work.</p>
 
-placeholder: &placeholder-desc >
-    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus
-      ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo
-      sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed
-      odio dui.</p>
+jsframes: &jsframes-desc >
+    <p>A JavaScript library for creating frame-based animations. There is also
+      experimental support for particles with some very basic physics. <a href="http://ianreah.com/jsFrames/">Visit the
+      project page</a> to find out how to use it and see some example usages.
+    </p>
 
+mockstock: &mockstock-desc >
+    <p><a href="/2012/11/29/MockStock-and-Two-Smoking-Libraries.html">An investigation</a>
+      into how <a href="http://signalr.net/">SignalR</a> and
+      <a href="http://msdn.microsoft.com/en-us/data/gg577609.aspx">Rx</a> could be used
+      together to make a (semi-)realistic stock price subscription service. Rx
+      generates the real-time sequences of price updates. SignalR transmits the data
+      to clients.</p>
+
+coverflow: &coverflow-desc >
+    <p>Two simple coverflow controls - one developed in Silverlight and one in JavaScript.
+      You can see each version in action <a href="http://ianreah.com/CoverFlow/">here</a>.
+      I wrote a <a href="http://www.codeproject.com/Articles/479137/A-Tale-of-Two-CoverFlows">CodeProject article</a>
+      which gives a high level overview with a bit of a comparison between the development
+      experience working with the two technologies.</p>
+
+spotibrowse: &spotibrowse-desc >
+    <p>A coverflow(-ish) Spotify App for browsing through the albums in your Spotify library. Implemented
+      with the Model-View-View Model (MVVM) pattern using <a href="http://knockoutjs.com/">knockoutjs</a>.
+      <a href="http://ianreah.com/Spotify-LibBrowser/">Visit the project page</a> for instructions on how
+      to load it into Spotify.</p>
+
+closuretape: &closuretape-desc >
+    <p>A simple animated stock ticker using Google Closure. You can see it in action <a href="http://ianreah.com/ClosureTickerTape/">here</a>,
+      or read the <a href="http://www.codeproject.com/Articles/265364/First-Adventures-in-Google-Closure">CodeProject article</a>
+      for a step-by-step tutorial on its implementation.</p>
 
 top3-projects:
   - name: AR-Molecule
@@ -54,29 +79,29 @@ next3-projects:
     url: /jsFrames/
     img-url: img/project_jsframes.png
     call-to-action: Find out more
-    description: *placeholder-desc
+    description: *jsframes-desc
   - name: MockStock
     url: http://mockstock.apphb.com/
     img-url: img/project_mockstock.png
-    call-to-action: Find out more
-    description: *placeholder-desc
+    call-to-action: See it in action
+    description: *mockstock-desc
   - name: CoverFlow
     url: /CoverFlow/
     img-url: img/project_coverflow.png
     call-to-action: Find out more
-    description: *placeholder-desc
+    description: *coverflow-desc
 
 theRest:
   - name: SpotiBrowse
     url: /Spotify-LibBrowser/
-    img-url: http://lorempixel.com/400/200
+    img-url: /img/project_spotibrowse.png
     call-to-action: Find out more
-    description: *placeholder-desc 
+    description: *spotibrowse-desc 
   - name: ClosureTape
     url: /ClosureTickerTape/
-    img-url: http://lorempixel.com/400/200
+    img-url: /img/project_closuretape.png
     call-to-action: See it in action
-    description: *placeholder-desc
+    description: *closuretape-desc
 ---
 
 {% comment %} top3 projects always shown {% endcomment %}
