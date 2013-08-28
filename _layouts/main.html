@@ -62,13 +62,13 @@
           {% for post in site.posts limit:5 %}
             <div class="row-fluid hidden-phone">
               <div class="span1 fake-bullet"></div>
-              <div class="span11"><a href="{{ post.url }}">{{ post.title }};</a> <span class="muted"><small>{{ post.date | date: "%b %Y" }}</small></span></div>
+              <div class="span11">{% include latest-post %}</div>
             </div>
           {% endfor %}
 
           <ul class="visible-phone">
             {% for post in site.posts limit:5 %}
-              <li><a href="{{ post.url }}">{{ post.title }};</a> <span class="muted"><small>{{ post.date | date: "%b %Y" }}</small></span></li>
+              <li>{% include latest-post %}</li>
             {% endfor %}
           </ul>
 
@@ -88,5 +88,13 @@
     {% if page.js %}
       <script src="{{page.js}}"></script>
     {% endif %}
+    <script type="text/javascript">
+      (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'http://ianreah.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+      }());
+    </script>
   </body>
 </html>

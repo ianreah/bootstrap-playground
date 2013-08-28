@@ -89,6 +89,10 @@ blockquote p {
   color: #CCC;
 }
 
+.latest-posts-meta a {
+  color: inherit;
+}
+
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) { 
 	#page-title {
