@@ -1,4 +1,8 @@
 <a href="{{ post.url }}">{{ post.title }}</a>
 <span class="muted latest-posts-meta">
-  | {{ post.date | date: "%b %Y" }} | <a href="{{post.url}}#disqus_thread">Comments</a>
+  | <small>{{ post.date | date: "%b %Y" }}</small> | <small>
+  <a href="{{post.url}}#disqus_thread">
+    Comments
+  </a>
+</small>
 </span>
