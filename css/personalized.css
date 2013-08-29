@@ -33,6 +33,14 @@ body {
 	background-color: #F2F2F2;
 }
 
+#cse-search-box {
+	margin: 24px 0;
+}
+
+#cse-search-box input {
+	width: 100%;
+}
+
 .post-meta {
 	margin: 0px;
 }
