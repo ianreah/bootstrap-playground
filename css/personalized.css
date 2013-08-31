@@ -74,6 +74,12 @@ pre {
   line-height: 18px;
 }
 
+.highlight pre, .highlight code {
+  overflow: auto;
+  word-wrap: normal;
+  white-space: pre;
+}
+
 blockquote {
   color: #666;
 }
