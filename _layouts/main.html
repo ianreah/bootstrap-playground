@@ -27,71 +27,18 @@
     </script>
   </head>
   <body>
-    <div class="navbar navbar-static-top navbar-inverse">
-      <div class="navbar-inner" id="header-background">
-        <a class="brand" id="page-title" href="http://ianreah.com/">ianreah.com</a>
-        <ul class="nav pull-right" id="social">
-          <li id="github"><a href="https://github.com/ianreah"><span>#</span></a></li>
-          <li id="twitter"><a href="https://twitter.com/ianreah"><span>#</span></a></li>
-          <li id="codeproject"><a href="http://www.codeproject.com/Members/ianreah"><span>#</span></a></li>
-          <li id="stackoverflow"><a href="http://stackoverflow.com/users/76116/ianr"><span>#</span></a></li>
-          <li id="linkedin"><a href="http://uk.linkedin.com/pub/ian-reah/3a/326/50a"><span>#</span></a></li>
-          <li id="rss"><a href="/rss.xml"><span>#</span></a></li>
-        </ul>
-        <img alt='Ian Reah' src='/img/ian-reah.jpg' class='img-polaroid hidden-phone' id="profile-photo" />
-      </div>
-    </div>
+    {% include navigation %}
     <div class="container-fluid">
       <div class="row-fluid">
         <div class="span9">{{ content }}</div>
         <div class="span3">
-
-          <form action="http://www.google.com/cse" id="cse-search-box">
-            <input type="hidden" name="cx" value="010218020208768645364:mi9dkwqfeuq" />
-            <input type="hidden" name="ie" value="UTF-8" />
-            <input type="text" name="q" />
-          </form>
-          <script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
-
-          <div class="page-header"><h2>About</h2></div>
-
-          <p>I work as a Software Developer at <a href='http://nonlinear.com/'>Nonlinear Dynamics Limited</a>, a developer of proteomics and metabolomics software.</p>
-
-          <p>My day job mainly involves developing Windows desktop applications with C# .NET.</p>
-
-          <p>My hobby/spare-time development tends to focus on playing around with some different technologies (which, at the minute seems to be web application development with JavaScript).</p>
-
-          <p>It&#8217;s this hobby/spare-time development that you&#8217;re most likely to read about here.</p>
-
-          <p class='text-right'><strong>Ian Reah</strong></p>
-
-          <div class="page-header"><h2>Latest Posts</h2></div>
-          
-          {% for post in site.posts limit:5 %}
-            <div class="row-fluid hidden-phone">
-              <div class="span1 fake-bullet"></div>
-              <div class="span11">{% include latest-post %}</div>
-            </div>
-          {% endfor %}
-
-          <ul class="visible-phone">
-            {% for post in site.posts limit:5 %}
-              <li>{% include latest-post %}</li>
-            {% endfor %}
-          </ul>
-
-          <p class='text-right'><a href="/blog">Full blog &raquo;</a></p>
+          {% include search %}
+          {% include about %}
+          {% include latest-posts %}
         </div>
       </div>
     </div>
-    <footer id="footer" class="navbar navbar-fixed-bottom">
-      <div class="navbar-inner">
-        <div class="container-fluid">
-          <p class="muted pull-left">ianreah.com</p>
-          <p class="pull-right"><a href="#">Back to top</a></p>
-        </div>
-      </div>
-    </footer>
+    {% include footer %}
     <script src="//code.jquery.com/jquery.js"></script>
     <script src="/js/bootstrap.min.js"></script>
     {% if page.js %}
